@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <h1>Typing Speed Test</h1>
+    </div>
+    <div class="container">
+      <p>Start typing to measure your speed</p>
+      <p>
+        You can click on vertical keyboard as well to type. It contain only
+        small letters and numbers
+      </p>
+      <div class="text-display">
+        <textarea id="text-display" placeholder="Generated text appears here..." disabled class="text-input"></textarea>
+      </div>
+      <textarea id="text-input" placeholder="Start typing here..." class="text-field hidden"></textarea>
+      <!-- Virtual Keyboard -->
+      <div id=" keyboard" class="keyboard">
+        <div class="keys">
+          <div data-key="49" class="key">1</div>
+          <div data-key="50" class="key">2</div>
+          <div data-key="51" class="key">3</div>
+          <div data-key="52" class="key">4</div>
+          <div data-key="53" class="key">5</div>
+          <div data-key="54" class="key">6</div>
+          <div data-key="55" class="key">7</div>
+          <div data-key="56" class="key">8</div>
+          <div data-key="57" class="key">9</div>
+          <div data-key="48" class="key">0</div>
+        </div>
+        <div class="keys">
+          <div data-key="81" class="key">q</div>
+          <div data-key="87" class="key">w</div>
+          <div data-key="69" class="key">e</div>
+          <div data-key="82" class="key">r</div>
+          <div data-key="84" class="key">t</div>
+          <div data-key="89" class="key">y</div>
+          <div data-key="85" class="key">u</div>
+          <div data-key="73" class="key">i</div>
+          <div data-key="79" class="key">o</div>
+          <div data-key="80" class="key">p</div>
+        </div>
+        <div class="keys">
+          <div data-key="65" class="key">a</div>
+          <div data-key="83" class="key">s</div>
+          <div data-key="68" class="key">d</div>
+          <div data-key="70" class="key">f</div>
+          <div data-key="71" class="key">g</div>
+          <div data-key="72" class="key">h</div>
+          <div data-key="74" class="key">j</div>
+          <div data-key="75" class="key">k</div>
+          <div data-key="76" class="key">l</div>
+        </div>
+        <div class="keys">
+          <div data-key="90" class="key">z</div>
+          <div data-key="88" class="key">x</div>
+          <div data-key="67" class="key">c</div>
+          <div data-key="86" class="key">v</div>
+          <div data-key="66" class="key">b</div>
+          <div data-key="78" class="key">n</div>
+          <div data-key="77" class="key">m</div>
+        </div>
+      </div>
+      <p>Time: <span id="time">0</span> seconds</p>
+      <button id="start-button">Start Test</button>
+      <button id="reset-button">Reset</button>
+      <h1>You typed <span id="char-count">0</span> letters in 60 seconds</h1>
+      <div id="results" style="display: none;">
+      </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

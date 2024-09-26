@@ -1,0 +1,86 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 100px minmax(calc(100vh - 250px), auto) 100px;
+  gap: 1rem;
+  grid-template-areas:
+    "h h h h h h h h h h h h"
+    "c c c c c c c c c c c c"
+    "c c c c c c c c c c c c";
+  background-color: #fff;
+  text-align: center;
+  font-family: Arial, sans-serif;
+}
+.header {
+  grid-area: h;
+}
+.container {
+  grid-area: c;
+}
+.footer {
+  grid-area: f;
+}
+
+textarea {
+  width: 80%;
+  height: 50px;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#results {
+  margin-top: 20px;
+}
+
+.keyboard {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+.keys {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.key {
+  width: calc(100vh * 0.1 + 1rem);
+  height: calc(3rem - 2px);
+  line-height: calc(3rem - 2px);
+  border-color: #000000;
+  border-style: solid;
+  text-align: center;
+  border-radius: 0.5rem;
+  font-weight: medium;
+}
+
+.key.active {
+  background-color: #4caf50;
+  color: white;
+  transition: background-color 0.1s;
+}
+.hidden {
+  opacity: 0;
+  position: absolute;
+  left: -9999px;
+}
+.text-display {
+  padding-left: 40%;
+}
+.text-input {
+  height: 15px;
+  scrollbar-width: none;
+}
+#reset-button {
+  align-items: center;
+}
